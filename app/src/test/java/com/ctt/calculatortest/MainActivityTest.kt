@@ -18,4 +18,31 @@ class MainActivityTest {
         }
     }
 
+    @Test
+    fun somarDoisNumerosNulos(){
+        val primeiroNumNull = null
+        val segundoNumNull = null
+
+        val resultadoFuncao = MainActivity().calcularSoma(primeiroNumNull, segundoNumNull)
+        val resultadoEsperado = "Insira um número!"
+    }
+
+    @Test
+    fun somarPrimeiroNumeroNulo(){
+        val primeiroNumNull = null
+        val segundoNum = 5
+
+        val resultadoFuncao = MainActivity().calcularSoma(primeiroNumNull, segundoNum)
+        val resultadoEsperado = "Insira um número!"
+    }
+
+    @Test
+    fun somarSegundoNumeroNulo(){
+        val primeiroNum = 10
+        val segundoNumNull = null
+
+        val resultadoFuncao = MainActivity().calcularSoma(primeiroNum, segundoNumNull)
+        val resultadoEsperado = "Insira um número!"
+    }
+
 }

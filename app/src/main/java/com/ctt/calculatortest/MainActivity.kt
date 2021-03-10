@@ -9,8 +9,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun calcularSoma(a:Int, b:Int):String{
-        var resultado = a+b
-        return "O resultado é $resultado"
+    fun calcularSoma(a:Int?, b:Int?): String {
+        var resultado = ""
+        resultado = if (a == null || b == null){
+            "Insira um número!"
+        } else{
+            "O resultado é "+(a+b)
+        }
+        return resultado
     }
 }
